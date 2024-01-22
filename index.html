@@ -191,7 +191,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -206,7 +206,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1705955005711">
+<div class="quarto-post image-right" data-index="0" data-categories="python,data visualization" data-listing-date-sort="1705910400000" data-listing-file-modified-sort="1705966433706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail">
 <p><a href="./posts/HW0/index.html" class="no-external"></a></p><a href="./posts/HW0/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -214,21 +214,49 @@ window.Quarto = {
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/HW0/index.html" class="no-external"></a>
+<a href="./posts/HW0/index.html" class="no-external">HW0</a>
 </h3>
 <div class="listing-subtitle">
 <a href="./posts/HW0/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
+data visualization
+</div>
+</div>
 <div class="listing-description">
-<a href="./posts/HW0/index.html" class="no-external"></a>
+<a href="./posts/HW0/index.html" class="no-external">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2">url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv"</span></span>
+<span id="cb1-3">penguins <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-4">penguins.head()</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">studyName</th>
+<th data-quarto-table-cell-role="th">…</th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th></tr></thead><tbody><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div></a>
 </div>
 </div>
 <div class="metadata">
-<p><a href="./posts/HW0/index.html" class="no-external"></a></p><a href="./posts/HW0/index.html" class="no-external">
+<a href="./posts/HW0/index.html" class="no-external">
+<div class="listing-date">
+Jan 22, 2024
+</div>
+<div class="listing-author">
+Shuyan Gao
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1705392000000" data-listing-file-modified-sort="1705914618859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1705392000000" data-listing-file-modified-sort="1705966177882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
 <div class="thumbnail">
 <p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
 <p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
