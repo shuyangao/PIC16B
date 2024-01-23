@@ -11,7 +11,35 @@
     "href": "posts/HW0/index.html",
     "title": "HW0",
     "section": "",
-    "text": "import pandas as pd\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\npenguins.head()\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN"
+    "text": "In this blog, I will be explaining how to construct interesting data visualizations of the Palmer Penguins data set using Python.\nThe dataset can be plugged into Python as shown below.\n\nimport pandas as pd\nimport numpy as np\nfrom matplotlib import pyplot as plt\nimport seaborn as sns\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\npenguins.head()\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN"
+  },
+  {
+    "objectID": "posts/HW0/index.html#introduction",
+    "href": "posts/HW0/index.html#introduction",
+    "title": "HW0",
+    "section": "",
+    "text": "In this blog, I will be explaining how to construct interesting data visualizations of the Palmer Penguins data set using Python.\nThe dataset can be plugged into Python as shown below.\n\nimport pandas as pd\nimport numpy as np\nfrom matplotlib import pyplot as plt\nimport seaborn as sns\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\npenguins.head()\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN"
+  },
+  {
+    "objectID": "posts/HW0/index.html#scatter-plot",
+    "href": "posts/HW0/index.html#scatter-plot",
+    "title": "HW0",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\nFor the next step, we will explore the numerical data in the table further in the following figures. Here, we create figures to model the relationship between different variables and columns in the dataset.\n\n# Creating first figure\n# Create empty subplots\nfig,ax = plt.subplots(1,2)\n# Define data and add it to subplots as scatter points\nfor i in set(penguins['Species']):\n    s = penguins[penguins['Species'] == i]\n    ax[0].scatter(s['Body Mass (g)'],\n        s['Culmen Length (mm)'],\n        label = i.split(' ')[0],\n        alpha = 0.5)\n    ax[1].scatter(s['Body Mass (g)'],\n        s['Culmen Depth (mm)'],\n        label = i.split(' ')[0],\n        alpha = 0.5)\n# Add labels and legend to plots\nax[0].set(title = \"Body Mass v. Culmen Length\",\n\nxlabel = \"Body Mass (g)\",\nylabel = \"Culmen Length (mm)\")\nax[1].set(title = \"Body Mass v. Culmen Depth\",\n\nxlabel = \"Body Mass (g)\",\nylabel = \"Culmen Depth (mm)\")\n\nax[0].legend()\nax[1].legend()\nplt.tight_layout()\n\n\n\n\n\n\n\n\nThis plot reveals that in all three species, there are positive correlations between the relationships, indicating that a greater body mass is associated with both a longer culmen length and a greater culmen depth."
+  },
+  {
+    "objectID": "posts/HW0/index.html#histogram",
+    "href": "posts/HW0/index.html#histogram",
+    "title": "HW0",
+    "section": "Histogram",
+    "text": "Histogram\nWe can also use histograms to do visualization\n\nfig,ax = plt.subplots(1)\n# Define data and add it to subplot as histogram\nfor i in set(penguins['Species']):\n    s = penguins[penguins['Species'] == i]\n    ax.hist(s['Flipper Length (mm)'],\n        label = i.split(' ')[0],\n        alpha = 0.5)\n    # Add labels and legend to plots\nax.set(title = \"Frequency of Penguins by Flipper Length\",\n    xlabel = \"Flipper Length (mm)\",\n    ylabel = \"Frequency\")\nax.legend()\nplt.tight_layout()\n\n\n\n\n\n\n\n\nFrom the histogram we can see that Gentoo have larger flipper length compared to Chinstrap and Adelie."
+  },
+  {
+    "objectID": "posts/HW0/index.html#boxplot",
+    "href": "posts/HW0/index.html#boxplot",
+    "title": "HW0",
+    "section": "Boxplot",
+    "text": "Boxplot\nBoxplot is useful for comparing the distributions of multiple datasets side-by-side. Let’s see how to create it.\n\nfig,(ax1,ax2) = plt.subplots(1,2, figsize=(20,6))\n# Add data to plots as boxplots\nfgrid = sns.boxplot(data = penguins,\nx = \"Delta 15 N (o/oo)\",\ny = \"Island\",\nhue = \"Species\", ax = ax1)\n\nfgrid = sns.boxplot(data = penguins,\nx = \"Delta 13 C (o/oo)\",\ny = \"Island\",\nhue = \"Species\", ax = ax2)\n\nplt.show()\nplt.tight_layout()\n\n\n\n\n\n\n\n\n&lt;Figure size 432x288 with 0 Axes&gt;\n\n\nThe box plot indicates that the penguins generally exhibit greater Delta 15 N values compared to Delta 13 N. Among them, Chinstrap penguins typically show higher levels of both Delta 15 N and Delta 13 N relative to other penguin species, while Gentoo penguins usually have lower Delta 15 and 13 N values in comparison to their counterparts."
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -25,6 +53,6 @@
     "href": "index.html",
     "title": "PIC16B",
     "section": "",
-    "text": "git add README.md\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW0\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\nJan 22, 2024\n\n\nShuyan Gao\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\nShuyan Gao\n\n\n\n\n\n\nNo matching items"
+    "text": "HW0\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\nJan 22, 2024\n\n\nShuyan Gao\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\nShuyan Gao\n\n\n\n\n\n\nNo matching items"
   }
 ]
